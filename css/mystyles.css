@@ -1,0 +1,98 @@
+@charset "UTF-8";
+:root {
+  --color-main: orange;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.navigation {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/main_small.jpg");
+  background-size: cover; /* Масштабує зображення, щоб воно покрило весь елемент */
+  background-repeat: no-repeat; /* Вимикає повторення зображення */
+  background-position: center; /* Розміщує зображення по центру */
+}
+.navigation__contact {
+  display: flex;
+  justify-content: space-between;
+  min-height: 40px;
+  border-bottom: 1px solid #ccc;
+  padding-top: 20px;
+}
+.navigation__contact--underline {
+  color: white;
+  text-decoration: none;
+}
+
+.header {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30vh;
+}
+
+.orange--button {
+  background: var(--color-main);
+  padding: 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+h3 {
+  color: #888888;
+  font-weight: 400;
+}
+
+h5 {
+  text-transform: uppercase;
+  color: #888888;
+}
+
+.about {
+  display: flex;
+  gap: 60px;
+  margin-top: 100px;
+}
+.about__photo__img {
+  height: 530px;
+  width: auto;
+  clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 0 100%);
+  object-fit: cover;
+}
+.about__info__header {
+  text-transform: uppercase;
+}
+.about__info--orange {
+  color: var(--color-main);
+}
+.about__info__phone {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-main);
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+.no-bullets {
+  list-style-type: none;
+}
+
+/*# sourceMappingURL=mystyles.css.map */
