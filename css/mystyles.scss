@@ -109,6 +109,11 @@ h5 {
     object-fit: cover;
     margin-left: 50px;
   }
+  @media (max-width: 1000px) {
+    &__photo__img, &__photo--block {
+      display: none;
+    }
+  }
 
   &__info {
     &__contact {
@@ -165,7 +170,8 @@ h5 {
 
 .call {
   margin-top: 100px;
-  height: 400px;
+  padding-bottom: 60px;
+  min-height: 400px;
   width: 100%;
   background-color: var(--color-main);
 
@@ -193,13 +199,12 @@ h5 {
 
 //Advantages
 .advantages {
-  height: 100vh;
-  //background-color: var(--color-gray);
+  min-height: 100vh;
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
   }
 
@@ -233,6 +238,7 @@ h5 {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%), url('/img/adv1.jpg');
   }
 
+
   &_2 {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .9) 100%), url('/img/adv2.jpg');
   }
@@ -243,6 +249,10 @@ h5 {
 
   &_4 {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .9) 100%), url('/img/adv4.jpg');
+  }
+
+  &_1:hover, &_2:hover, &_3:hover, &_4:hover {
+    scale: 1.1;
   }
 
   &__title {
@@ -258,3 +268,64 @@ h5 {
   }
 
 }
+
+.product {
+  display: flex;
+  width: 100%;
+  min-height: 70vh;
+  box-sizing: border-box;
+  background: var(--color-gray);
+
+  &__photo {
+    width: 100%;
+    background-image: url('/img/014.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__info__desc {
+    color: white;
+  }
+}
+
+.subtitle__product {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: white;
+}
+
+
+//Comfort
+
+
+.comfort {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+  }
+
+  &__finish__desc {
+    margin-top: 40px;
+  }
+}
+
+
+
+
+

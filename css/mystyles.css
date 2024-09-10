@@ -105,6 +105,11 @@ h5 {
   object-fit: cover;
   margin-left: 50px;
 }
+@media (max-width: 1000px) {
+  .about__photo__img, .about__photo--block {
+    display: none;
+  }
+}
 .about__info__contact {
   display: flex;
   gap: 20px;
@@ -147,7 +152,8 @@ h5 {
 }
 .call {
   margin-top: 100px;
-  height: 400px;
+  padding-bottom: 60px;
+  min-height: 400px;
   width: 100%;
   background-color: var(--color-main);
 }
@@ -170,12 +176,12 @@ h5 {
 }
 
 .advantages {
-  height: 100vh;
+  min-height: 100vh;
 }
 .advantages__wrapper {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 .advantages__contact {
@@ -213,6 +219,9 @@ h5 {
 .advantage_4 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url("/img/adv4.jpg");
 }
+.advantage_1:hover, .advantage_2:hover, .advantage_3:hover, .advantage_4:hover {
+  scale: 1.1;
+}
 .advantage__title {
   color: white;
   font-size: 20px;
@@ -221,6 +230,51 @@ h5 {
 .advantage__desc {
   color: white;
   padding: 15px;
+}
+
+.product {
+  display: flex;
+  width: 100%;
+  min-height: 70vh;
+  box-sizing: border-box;
+  background: var(--color-gray);
+}
+.product__photo {
+  width: 100%;
+  background-image: url("/img/014.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product__info__desc {
+  color: white;
+}
+
+.subtitle__product {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: white;
+}
+
+.comfort__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+.comfort__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+}
+.comfort__item__icon {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.comfort__finish__desc {
+  margin-top: 40px;
 }
 
 /*# sourceMappingURL=mystyles.css.map */
