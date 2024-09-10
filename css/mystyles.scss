@@ -109,6 +109,7 @@ h5 {
     object-fit: cover;
     margin-left: 50px;
   }
+
   @media (max-width: 1000px) {
     &__photo__img, &__photo--block {
       display: none;
@@ -300,6 +301,7 @@ h5 {
 
 
 .comfort {
+  margin-bottom: 80px;
   &__wrapper {
     display: flex;
     justify-content: center;
@@ -322,6 +324,53 @@ h5 {
 
   &__finish__desc {
     margin-top: 40px;
+  }
+}
+
+//Testimonials
+.testimonials {
+  min-height: 80vh;
+  background-color: var(--color-main);
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #fcc368;
+  padding: 30px;
+  margin-right: 40px;
+
+  &__header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  &__author {
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+
+    &__photo img {
+      width: 30%;
+      border: 4px var(--color-main) solid;
+      border-radius: 50%;
+    }
   }
 }
 
