@@ -22,16 +22,26 @@ h1 {
 .navigation {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/main_small.jpg");
-  background-size: cover; /* Масштабує зображення, щоб воно покрило весь елемент */
-  background-repeat: no-repeat; /* Вимикає повторення зображення */
-  background-position: center; /* Розміщує зображення по центру */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  &__languages--style {
+    color: white;
+    padding: 6px;
+  }
+
 
   &__contact {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
     min-height: 40px;
     border-bottom: 1px solid #ccc;
     padding-top: 20px;
+
 
     &--underline {
       color: white;
@@ -88,7 +98,7 @@ h5 {
     position: absolute;
     top: 480px;
     left: -10px;
-    width: 150px;
+    width: 160px;
     height: 150px;
     background-color: var(--color-main);
     clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 0 100%);
@@ -475,7 +485,7 @@ h5 {
 
 .footer {
   padding: 5px;
-  border-top: 2px solid var(--color-gray);
+  border-top: 1px solid var(--color-gray);
   font-size: 12px;
   text-align: center;
 }
