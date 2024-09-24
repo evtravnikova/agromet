@@ -15,12 +15,12 @@ console.log(navigator);
 
 */
 
+const cookieConsent = document.getElementById('cookieConsent');
+const acceptBtn = document.getElementById('acceptBtn');
+const declineBtn = document.getElementById('declineBtn');
 
 //Pop-up about cookies
 document.addEventListener('DOMContentLoaded', function () {
-  const cookieConsent = document.getElementById('cookieConsent');
-  const acceptBtn = document.getElementById('acceptBtn');
-  const declineBtn = document.getElementById('declineBtn');
 
   // Перевірка, чи вже дав користувач згоду
   if (!localStorage.getItem('cookieConsent')) {
@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('cookieConsent', 'accepted');
     cookieConsent.style.display = 'none';
     console.log('User accepted cookies');
+    loadGoogleAnalytics();
   });
 
   // Користувач відмовляється від cookies
@@ -40,20 +41,18 @@ document.addEventListener('DOMContentLoaded', function () {
     cookieConsent.style.display = 'none';
     console.log('User declined cookies');
   });
+
+//Якщо у користувача вже є дозвіл на cookies
+  if (localStorage.getItem('cookieConsent') === 'accepted') {
+    console.log('I have a permission to use cookies');
+    loadGoogleAnalytics();
+  }
 });
 
 
 
-
-
-
-
-
-const acceptBtn = document.getElementById('acceptBtn');
-
-acceptBtn.addEventListener("click", function () {
-  localStorage.setItem("consentGranted", "true");
-
+//Завантажити Google Analytics
+function loadGoogleAnalytics() {
   function gtag() {
     dataLayer.push(arguments);
   }
@@ -64,7 +63,9 @@ acceptBtn.addEventListener("click", function () {
     ad_storage: 'granted',
     analytics_storage: 'granted'
   });
-});
+  console.log('Google analytics was loaded')
+}
+
 
 // Load gtag.js script.
 let gtagScript = document.createElement('script');
