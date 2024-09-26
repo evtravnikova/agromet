@@ -185,11 +185,11 @@ h5 {
 }
 
 .advantages {
-  min-height: 100vh;
+  min-height: 70vh;
 }
 .advantages__wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 30px;
   flex-wrap: wrap;
 }
@@ -244,7 +244,7 @@ h5 {
 .product {
   display: flex;
   width: 100%;
-  min-height: 70vh;
+  min-height: 50vh;
   box-sizing: border-box;
   background: var(--color-gray);
 }
@@ -266,6 +266,7 @@ h5 {
 }
 
 .comfort {
+  min-height: 50vh;
   margin-bottom: 80px;
 }
 .comfort__wrapper {
@@ -290,7 +291,7 @@ h5 {
 }
 
 .testimonials {
-  min-height: 80vh;
+  min-height: 40vh;
   background-color: var(--color-main);
   padding-top: 80px;
   padding-bottom: 80px;
@@ -314,6 +315,7 @@ h5 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 20px;
 }
 @media (max-width: 1000px) {
   .testimonials__info {
@@ -358,27 +360,8 @@ h5 {
   border-radius: 50%;
 }
 
-/*.contact {
-  min-height: 70vh;
-
-  &__info {
-    text-align: start;
-  }
-
-  &__block {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  &--underline {
-      text-decoration: none;
-    color: black;
-  }
-}*/
 .contact {
-  min-height: 70vh;
+  min-height: 30vh;
 }
 .contact__info {
   position: absolute;
@@ -414,7 +397,11 @@ h5 {
     width: 80%;
   }
 }
-.footer {
+footer {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   padding: 5px;
   border-top: 1px solid var(--color-gray);
   font-size: 12px;

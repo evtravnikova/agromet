@@ -1,20 +1,5 @@
 'use strict';
-//Вибір мови
-/*
-
-let userLang = navigator.language; //"uk-UA"
-let urls = {
-    'uk-UA': 'http://localhost:63342/agromet/index.html',
-    'en-US': 'http://localhost:63342/agromet/index-en.html',
-};
-let defaultUrl = 'http://localhost:63342/agromet/index.html';
-
-let url = urls[userLang] ?? defaultUrl;
-console.log(url);
-console.log(navigator);
-
-*/
-
+//Cookies and Google Analytics
 const cookieConsent = document.getElementById('cookieConsent');
 const acceptBtn = document.getElementById('acceptBtn');
 const declineBtn = document.getElementById('declineBtn');
@@ -44,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Якщо у користувача вже є дозвіл на cookies
   if (localStorage.getItem('cookieConsent') === 'accepted') {
-    console.log('I have a permission to use cookies');
     loadGoogleAnalytics();
   }
 });
@@ -63,7 +47,6 @@ function loadGoogleAnalytics() {
     ad_storage: 'granted',
     analytics_storage: 'granted'
   });
-  console.log('Google analytics was loaded')
 }
 
 
